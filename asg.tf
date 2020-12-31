@@ -17,7 +17,7 @@ resource "aws_lb_listener_rule" "catalogue" {
   }
   condition               {
     host_header           {
-      values            = ["catalogue-${var.ENV}.devopsb53.tk"]
+      values            = ["${var.COMPONENT}-${var.ENV}.devopsb53.tk"]
     }
   }
 }
